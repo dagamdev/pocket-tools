@@ -1,12 +1,6 @@
 'use strict'
 
-let tab
-const hosts = [
-  'https://pocketoption.com'
-]
-
 chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-  tab = tabs[0]
 
   localStorageGet(['featureStates', 'theme', 'compactMode'], (result) => {
     if (result.featureStates) featureStates = result.featureStates
@@ -76,7 +70,7 @@ document.addEventListener('click', ev => {
       } else {
         document.body.classList.remove('compact')
       }
-      chrome.tabs.query({ url: ["*://*.qxbroker.com/*"] }, (tabs) => {
+      chrome.tabs.query({ url: ["*://*.pocketoption.com/*"] }, (tabs) => {
         tabs.forEach(tab => {
           chrome.tabs.sendMessage(tab.id, {
             type: 'UPDATE_COMPACTMODE',

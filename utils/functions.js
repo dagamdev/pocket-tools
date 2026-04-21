@@ -57,6 +57,20 @@ function toggleFeature (featureName, newState) {
 
   const handler = handlers[featureName]
   if (handler) handler(newState, oldState)
+
+  const activeFeatures = Object.values(featureStates).filter(Boolean).length
+  const totalFeatures = featureKeys.length
+
+  const featuresCount = document.getElementById("activeFeaturesCount")
+  if (featuresCount){
+    featuresCount.textContent = `${activeFeatures} / ${totalFeatures} funciones activas`
+  }
+
+  const featureInput = document.getElementById(featureName)
+
+  if (featureInput) {
+    featureInput.checked = newState
+  }
 }
 
 /**

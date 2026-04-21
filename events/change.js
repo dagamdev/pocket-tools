@@ -22,7 +22,7 @@ function changeEvent (ev) {
       }
 
       localStorageSet({ 'featureStates': featureStates }, () => {
-        chrome.tabs.query({ url: ["*://*.qxbroker.com/*"] }, (tabs) => {
+        chrome.tabs.query({ url: ["*://*.pocketoption.com/*"] }, (tabs) => {
           tabs.forEach(tab => {
             chrome.tabs.sendMessage(tab.id, {
               type: 'UPDATE_FEATURE',

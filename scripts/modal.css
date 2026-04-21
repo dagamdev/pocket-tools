@@ -37,7 +37,7 @@
 .toggle-modal-exp {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 90px;
   z-index: 9999;
   cursor: pointer;
   background-color: var(--bg-color-exp);
@@ -45,10 +45,15 @@
   border-radius: 50%;
   color: var(--text-color-exp);
   display: none;
+  transition: right .4s ease;
 
   &.show-exp {
     display: flex;
   }
+}
+
+.superCleanMode .toggle-modal-exp {
+  right: 20px;
 }
 
 .modal-panel-exp {
