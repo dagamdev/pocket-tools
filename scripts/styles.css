@@ -1,0 +1,106 @@
+.cleanInterface, .superCleanMode {
+  .left-sidebar, .info-icons {
+    display: none;
+  }
+
+  .chart-container canvas {
+    width: 100% !important;
+  }
+}
+
+.superCleanMode {
+  .control-wrap, .right-sidebar, .site-header {
+    display: none;
+  }
+  
+  .chart-container {
+    width: 100% !important;
+  }
+
+  .chart-container canvas {
+    height: 100% !important;
+  }
+  
+  .chart .scroll-to-end {
+    right: 2px;
+    animation: right .5s;
+  }
+}
+
+.hideMarketSentiment {
+  .auxiliary-information-panels {
+    display: none;
+  }
+}
+
+.deepDarkMode {
+  /* --bg-color: #1a1a1a;
+  --border: #333;
+  --bg-secondary: #222222;
+  --hover-color: #0a0a0a; */
+
+  --bg-secondary: #1a1a1a;  
+  --bg-color: #141414;      
+  --border: #2a2a2a;         
+  --hover-color: #242424;
+
+  --po-ui-kit-right-sidebar-modal-background-color: rgb(from var(--bg-secondary) r g b / 0.5);
+
+  background-color: var(--bg-color) !important;
+
+  .right-sidebar, .site-header, .assets-favorites-list, .block__control, .window window-1 div, .window window-1 a {
+    background-color: var(--bg-color) !important;
+  }
+
+  .call-put-block.control-panel, .left-sidebar, .dropdown-toggle, .dropdown-item, .deals-noty, .deals-list__group-label, .right-widget-container .deals-list__item:nth-child(2n), .drawing-settings-panel {
+    background-color: var(--bg-secondary) !important;
+  }
+
+  .active .js-left-sidebar-menu, .widget-slot__header .title {
+    background-color: var(--hover-color) !important;
+  }
+
+  .drop-down-modal a, li.active.open-menu>a {
+    background-color: var(--hover-color) !important;
+  }
+
+  .drop-down-modal .active a {
+    background-color: rgb(from var(--bg-color) r g b / 0.2) !important;
+  }
+
+  .currencies-block__in, .items__link, .widget-slot__header .divider>ul a {
+    background-color: var(--border) !important;
+  }
+
+  .widget-slot__header .divider>ul .active a {
+    background-color: rgb(from var(--bg-color) r g b / 0.4) !important;
+  }
+
+  .drop-down-modal, .amount-field {
+    background-color: var(--bg-secondary) !important;
+  }
+
+  .deals-noty {
+    border-color: var(--border);
+  }
+
+  .themes-block .list-checkbox .inner {
+    cursor: not-allowed;
+  }
+
+  .auxiliary-information-panels, .auxiliary-information-panels__item, .trading-panel-modal__dops.dops-with-timeframes, .multiply__btn, .panel-collapse, .virtual-keyboard__input, .trading-panel-modal__dops, .dops__timeframes-item {
+    background-color: var(--bg-color) !important;
+  }
+
+  .control-buttons__wrapper {
+    background-color: var(--border) !important;
+  }
+
+  .drawing-settings-panel {
+    border: solid 1px var(--border) !important;
+  }
+
+  .drawing-settings-panel__btn {
+    border-color: var(--border) !important;
+  }
+}
