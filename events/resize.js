@@ -1,7 +1,7 @@
 let modalPanel
 
 function resizeEvent () {
-  if (window.innerHeight >= screen.height) {
+  if (Math.round(window.innerHeight * window.devicePixelRatio) >= screen.height) {
     const toogleButton = document.querySelector('.toggle-modal-exp')
     const modalPanel = document.querySelector('.modal-panel-exp')
 
